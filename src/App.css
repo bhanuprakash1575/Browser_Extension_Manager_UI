@@ -1,0 +1,107 @@
+.searchbar {
+  background-color: var(--searchbar-background);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+
+  button {
+    background-color: var(--theme-toggle-button-background);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 20px;
+
+  .title {
+    font-size: 28px;
+    font-weight: bolder;
+    padding-bottom: 0px;
+  }
+
+  .buttons-container {
+    display: flex;
+    gap: 10px;
+    button {
+      padding: 0px 20px;
+      padding-top: 5px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--card-background-color);
+      border-radius: 20px;
+      border: var(--border-size) solid var(--border-color);
+
+      &:hover {
+        border-color: var(--active-button-background-color);
+      }
+    }
+    [data-active="true"] {
+      background-color: var(--active-button-background-color);
+      border-color: var(--active-button-background-color);
+      color: var(--active-button-text-color);
+    }
+  }
+}
+
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding-bottom: 60px;
+  .card {
+    min-width: 200px;
+    max-width: 500px;
+    border-radius: 20px;
+    background-color: var(--card-background-color);
+    border: var(--border-size) solid var(--border-color);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+
+    .content-section {
+      display: flex;
+      gap: 20px;
+      align-items: start;
+
+      .title-section .description {
+        font-weight: 300;
+        color: var(--secondary-text-color);
+      }
+    }
+
+    .buttons-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        padding: 5px 20px;
+        padding-top: 7px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--card-background-color);
+        border-radius: 20px;
+        border: var(--border-size) solid var(--border-color);
+        &:hover {
+          border-color: var(--active-button-background-color);
+        }
+      }
+    }
+  }
+}
