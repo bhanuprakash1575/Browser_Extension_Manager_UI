@@ -105,7 +105,7 @@ interface CardProps extends Extension {
     const {theme, toggleTheme} = useContext(ThemeContext)
     return (
       <section className="searchbar container">
-        <img className="logo" src="../assets/images/logo.svg " alt="search" />
+        <img className="logo" src="../public/images/logo.svg " alt="search" />
         <button
           onClick={toggleTheme}
           className="theme-toggle-button"
@@ -113,8 +113,8 @@ interface CardProps extends Extension {
           <img
             src={
               theme === "dark"
-                ? "../assets/images/icon-sun.svg"
-                : "../assets/images/icon-moon.svg"
+                ? "../public/images/icon-sun.svg"
+                : "../public/images/icon-moon.svg"
             }
             alt="search"
           />
