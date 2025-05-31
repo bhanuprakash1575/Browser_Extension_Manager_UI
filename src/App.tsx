@@ -2,6 +2,7 @@
   import "./App.css";
   import CustomizedSwitches from "./Switch";
   import { ThemeContext } from "./utils/ThemeContext";
+  import data from '../data.json';
 
   type FilterType = "All" | "Active" | "Inactive";
 
@@ -27,15 +28,16 @@
     const [extensions, setExtensions] = useState<Extension[]>([]);
 
     useEffect(() => {
-      fetch("../data.json")
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Fetched data:", data);
-          setExtensions(data);
-        })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-        });
+      // fetch("../data.json")
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     console.log("Fetched data:", data);
+      //     setExtensions(data);
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error fetching data:", error);
+      //   });
+      setExtensions(data);
     }, []);
 
     const ToggleStatus = (isActive: boolean, name: string) => {
